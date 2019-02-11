@@ -137,6 +137,7 @@ class Zine extends Component {
       size,
       summary: { summary },
     } = this.props.pageContext.edge.node;
+    console.log(interiorImages);
 
     return (
       <>
@@ -146,7 +147,9 @@ class Zine extends Component {
               <CoverImg fluid={coverImage.fluid} />
             </div>
             <div>
-              <DetailsList>{this.drawDetails(interiorImages)}</DetailsList>
+              {interiorImages && interiorImages.length > 0 ? (
+                <DetailsList>{this.drawDetails(interiorImages)}</DetailsList>
+              ) : null}
             </div>
             <div>
               <h2>{name}</h2>
