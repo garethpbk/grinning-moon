@@ -137,7 +137,6 @@ class Zine extends Component {
       size,
       summary: { summary },
     } = this.props.pageContext.edge.node;
-    console.log(interiorImages);
 
     return (
       <>

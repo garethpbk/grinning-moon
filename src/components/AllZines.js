@@ -60,7 +60,6 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    console.log(this.props.data);
     const allZines = this.props.data.allContentfulZine.edges;
     let allZineIds = [];
     allZines.map(zine => {
